@@ -1,25 +1,16 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { ApplicationWrapper } from './layouts/Wrapper/Wrapper';
-import { Landing } from './pages';
+import { Navbar } from '@components';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element:<Landing/>
-  }
-]);
+const root = document.getElementById('root');
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-
-root.render(
-  <React.StrictMode>
-    <ApplicationWrapper>
-      <RouterProvider router={router} />
-    </ApplicationWrapper>
-  </React.StrictMode>
-);
+if (root === null) {
+  console.error('No root found in index.html, please contact an admin');
+} else {
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <Navbar />
+    </React.StrictMode>
+  );
+}
