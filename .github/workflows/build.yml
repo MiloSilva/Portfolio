@@ -39,8 +39,27 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
+
+      - name: Upload GitHub Pages artifact
+          uses: actions/upload-pages-artifact@v1.0.7
             
       - name: build
         run: |
           pnpm install
           pnpm run build
+
+  deploy:
+    needs: build
+    
+    permissions: write
+    id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
