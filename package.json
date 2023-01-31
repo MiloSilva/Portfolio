@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "homepage": "https://milosilva.github.io/Portfolio/",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
