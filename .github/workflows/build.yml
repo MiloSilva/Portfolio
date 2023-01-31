@@ -47,6 +47,12 @@ jobs:
         run: |
           pnpm install
           pnpm run build
+          cp -a dist/. public/
+        artifacts:
+          paths:
+            - public
+        rules:
+          - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
   deploy:
     needs: build
