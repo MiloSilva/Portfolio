@@ -48,11 +48,12 @@ jobs:
           pnpm install
           pnpm run build
           cp -a dist/. public/
-        artifacts:
-          paths:
-            - public
-        rules:
-          - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+        
+      - name: Save public
+        uses: actions/upload-artifact@v3
+        with:
+          name: public
+          path: public
 
   deploy:
     needs: build
