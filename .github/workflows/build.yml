@@ -55,8 +55,9 @@ jobs:
   deploy:
     needs: build
 
-    pages: write
-    id-token: write
+    permissions:
+      pages: write
+      id-token: write
 
     runs-on: ubuntu-latest
 
