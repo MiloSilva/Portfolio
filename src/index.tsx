@@ -8,7 +8,7 @@ const root = document.getElementById('root');
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/Portfolio/',
     element: <Landing />,
     children: [],
   },
