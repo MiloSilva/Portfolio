@@ -12,7 +12,7 @@ export default defineConfig({
       '@pages': resolve(__dirname + '/src/pages'),
     },
   },
-  base: "/Portfolio/",
+  base: "/",
   server: {
     open: true,
     port: 4200,
