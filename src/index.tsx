@@ -1,21 +1,21 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-import { Landing } from '@pages';
+import { Landing } from "@pages";
 
-const root = document.getElementById('root');
+const root = document.getElementById("root");
 
 const router = createBrowserRouter([
   {
-    path: '/Portfolio/',
+    path: "/",
     element: <Landing />,
     children: [],
   },
 ]);
 
 if (root === null) {
-  console.error('No root found in index.html, please contact an admin');
+  console.error("No root found in index.html, please contact an admin");
 } else {
   ReactDOM.createRoot(root).render(
     <React.StrictMode>
