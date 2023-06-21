@@ -1,36 +1,43 @@
+import { Card, Header } from '@components'
+
 export const Landing = () => {
   return (
     <>
-      <section id="Introduction">
-        <h1>Juan Camilo Silva</h1>
-        <h2>FullStack Developer</h2>
-        <h3>Seasoning the Web</h3>
-        <p>
-          Innovative, detail focused, passionate, optimization nerd, these are
-          only a few words that have been used to describe me as a web developer
-          with a knack for bringing projects from simple ideas to working
-          products. Love for learning, experimenting and providing unique
-          solutions to unique problems and giving a new point of view to
-          existing projects. Proud of my coding and people skills, great at
-          troubleshooting and bug hunting, love for attention to detail and
-          viewing products from the user's point of view.
-        </p>
-      </section>
-      <section id="skills">
-        <h1>Tecnical Skills</h1>
-        <h4>HTML 100%</h4>
-        <h4>CSS3 100%</h4>
-        <h4>Typescript 100%</h4>
-        <h4>React 100%</h4>
-        <h4>REST APIs 100%</h4>
-        <h4>SQL & NoSQL 80%</h4>
-        <h4>Agile Technologies 80%</h4>
-      </section>
-      <section id="Experience">
-        <section>
-          <h1>Full Stack Developer</h1>
-          <h2>Kiwi Campus</h2>
-          <h6>September 2021 - Present</h6>
+      <Header imageURL='https://placehold.co/600x400' title='Milo Silva'/>
+
+      <Card header='Seasoning the Web'>
+          <p>
+            Innovative, detail focused, passionate, optimization nerd, these are
+            only a few words that have been used to describe me as a web developer
+            with a knack for bringing projects from simple ideas to working
+            products. Love for learning, experimenting and providing unique
+            solutions to unique problems and giving a new point of view to
+            existing projects. Proud of my coding and people skills, great at
+            troubleshooting and bug hunting, love for attention to detail and
+            viewing products from the user's point of view.
+          </p>
+      </Card>
+
+      <Card header='Tecnical Skills'>
+        <ul>
+          <li><h4>HTML 100%</h4></li>
+          <li><h4>CSS3 100%</h4></li>
+          <li><h4>Typescript 100%</h4></li>
+          <li><h4>React 100%</h4></li>
+          <li><h4>REST APIs 100%</h4></li>
+          <li><h4>SQL & NoSQL 80%</h4></li>
+          <li><h4>Agile Technologies 80%</h4></li>
+          <li><h4>Python 90%</h4></li>
+        </ul>
+      </Card>
+
+      <section>
+        <Card header='Neostella'>
+          <h6>2023 - Now</h6>
+        </Card>
+
+        <Card header='Kiwi Campus'>
+          <h6>2021 - 2023</h6>
           <ul>
             <li>
               Update and maintain the landing page with updated information and
@@ -51,29 +58,24 @@ export const Landing = () => {
               and monitoring of the bots.
             </li>
           </ul>
-        </section>
-        <section>
-          <h1>Full Stack Developer</h1>
-          <h2>National University of Colombia</h2>
-          <h6>January 2020 - June 2021</h6>
-          <ul>
-            <li>
-              Led a group of developers in creating a new web application
-              hosting course literature, videos and exams.
-            </li>
-            <li>
-              Containerized the application and hosted it in AWS allowing for a
-              scalable infrastructure and minimal downtime.
-            </li>
-            <li>Provide server solutions for managing software licenses</li>
-          </ul>
-        </section>
+        </Card>
+
+        <Card header='National University of Colombia'>
+          <h6>2020 - 2021</h6>
+            <ul>
+              <li>
+                Led a group of developers in creating a new web application
+                hosting course literature, videos and exams.
+              </li>
+              <li>
+                Containerized the application and hosted it in AWS allowing for a
+                scalable infrastructure and minimal downtime.
+              </li>
+              <li>Provide server solutions for managing software licenses</li>
+            </ul>
+        </Card>
       </section>
-      <section id="Education">
-        <h1>Bachelor's degree in Software Engineering</h1>
-        <h2>Politecnico Gran Colombiano</h2>
-        <h6>2023 - Present</h6>
-      </section>
+
       <section id="footer">
         <h1>Hire me, I'm desperate</h1>
         <br />

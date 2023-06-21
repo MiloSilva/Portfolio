@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import { Landing } from "@pages";
+import GlobalStyle from "./globalStyles";
 
 const root = document.getElementById("root");
 
@@ -19,6 +20,7 @@ if (root === null) {
 } else {
   ReactDOM.createRoot(root).render(
     <React.StrictMode>
+      <GlobalStyle />
       <RouterProvider router={router} />
     </React.StrictMode>
   );
